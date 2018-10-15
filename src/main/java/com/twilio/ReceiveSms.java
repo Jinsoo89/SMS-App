@@ -11,7 +11,13 @@ public class ReceiveSms {
     public static void main(String[] args) {
 
         post("/receive-sms", (req, res) -> {
-            res.type("aplication/xml");
+            System.out.println(req.params("SmsSid"));
+            System.out.println(req.params("Body"));
+            System.out.println(req.body());
+            System.out.println(req.params());
+            System.out.println(req.attributes());
+
+            res.type("application/xml");
 
             Body body = new Body.Builder("Hello world")
                     .build();
