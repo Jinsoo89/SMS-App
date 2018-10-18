@@ -6,6 +6,8 @@ import com.twilio.twiml.messaging.Body;
 import com.twilio.twiml.messaging.Message;
 import com.twilio.twiml.MessagingResponse;
 
+import java.sql.SQLOutput;
+
 public class ReceiveSms {
 
     public static void main(String[] args) {
@@ -15,7 +17,7 @@ public class ReceiveSms {
             System.out.println(req.params("Body"));
             System.out.println(req.body());
             System.out.println(req.params());
-            System.out.println(req.attributes());
+
 
             res.type("application/xml");
 
